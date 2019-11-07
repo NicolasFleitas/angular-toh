@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+
+// importar el FormsModule
+import { FormsModule } from '@angular/forms'; // <-- NgModel viene de ahí
+
+// cada componente debe declararse exactamente en un NgModule
+// al generar comp. con la CLI angular, esta declara el comp. de forma automatica
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // <-- agregar
   ],
   providers: [],
   bootstrap: [AppComponent]
