@@ -7,7 +7,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 // importar el FormsModule
 import { FormsModule } from '@angular/forms';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // <-- NgModel viene de ahí
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component'; // <-- NgModel viene de ahí
 
 // cada componente debe declararse exactamente en un NgModule
 // al generar comp. con la CLI angular, esta declara el comp. de forma automatica
@@ -16,7 +17,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // <-
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
