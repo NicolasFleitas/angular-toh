@@ -11,15 +11,17 @@ import { MessageService } from './message.service';
 export class HeroService {
 
   constructor(public messageService: MessageService) { }
-  // getHeroes(): Hero[] {
-  //   return HEROES;
-  // }
-  // reemplazamos la funcion anterior con la sgte
 
   getHeroes(): Observable<Hero[]> {
     // TODO: send the message _after_ fetching the heroes
-    this.messageService.add('HeroService: fetched heores');
+    this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
+  }
+
+  getHero(id: number): Observable<Hero> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(HEROES.find(hero => hero.id === id));
   }
 
 }
